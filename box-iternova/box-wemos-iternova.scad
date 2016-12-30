@@ -43,7 +43,7 @@ translate([100,0,0]) {
         }
 
         // Grid hexagonal tapa
-        translate( [box_thick, box_thick, 0 ]) grid_hexagonal( (box_width / 2) - ( 2 * box_thick ), box_height - ( 2 * box_thick ), box_thick + 2, 4 );
+        translate( [box_thick, box_thick, -1 ]) grid_hexagonal( (box_width / 2) - ( 2 * box_thick ), box_height - ( 2 * box_thick ), box_thick + 2, 4 );
         
         // grid_rectangular tapa
         //translate( [ ( 2 + n_grid_rectangulars_bottom ) * 2 * box_thick ,  box_thick * 2 , 0]) rotate([0,0,90])  grid_rectangular( n_grid_rectangulars_bottom,  box_thick+2,  box_thick / 2,  box_height - 4 *  box_thick, 4 *  box_thick );
