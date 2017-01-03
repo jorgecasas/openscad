@@ -38,7 +38,10 @@ translate([100,0,0]) {
         // Tapa + reborde de tapa
         union() {
             cube( [ box_width,  box_height,  box_thick] );
-            translate([box_thick, box_thick, 0]) cube( [ box_width - 2 * box_thick,  box_height- 2 * box_thick, 2 * box_thick] );
+            difference() {
+                translate([box_thick, box_thick, 0]) cube( [ box_width - 2 * box_thick,  box_height- 2 * box_thick, 2 * box_thick] );
+                translate([box_thick * 2 , box_thick * 2, 0]) cube( [ box_width - 4 * box_thick,  box_height- 4 * box_thick, 3 * box_thick] );
+            }
         
         }
 
