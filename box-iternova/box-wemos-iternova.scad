@@ -6,7 +6,7 @@ box_height = 80 + 2 *  box_thick;
 box_depth = 24 + 2 *  box_thick;
 n_grid_rectangulars_bottom = 8;
 n_grid_rectangulars_lateral = 8;
-
+box_thick_margin = box_thick / 10;
 
 // Exterior (bottom)
 difference() {
@@ -39,14 +39,14 @@ translate([100,0,0]) {
         union() {
             cube( [ box_width,  box_height,  box_thick] );
             difference() {
-                translate([box_thick, box_thick, 0]) cube( [ box_width - 2 * box_thick,  box_height- 2 * box_thick, 2 * box_thick] );
+                translate([box_thick + box_thick_margin, box_thick + box_thick_margin, 0]) cube( [ box_width - 2 * (box_thick + box_thick_margin),  box_height - 2 * (box_thick + box_thick_margin), 2 * box_thick] );
                 translate([box_thick * 2 , box_thick * 2, 0]) cube( [ box_width - 4 * box_thick,  box_height- 4 * box_thick, 3 * box_thick] );
             }
         
         }
 
         // Grid hexagonal tapa
-        translate( [box_thick, box_thick, -1 ]) grid_hexagonal( (box_width / 2) - ( 2 * box_thick ), box_height - ( 2 * box_thick ), box_thick + 2, 4 );
+       translate( [box_thick, box_thick, -1 ]) grid_hexagonal( (box_width / 2) - ( 2 * box_thick ), box_height - ( 2 * box_thick ), box_thick + 2, 4 );
         
         // grid_rectangular tapa
         //translate( [ ( 2 + n_grid_rectangulars_bottom ) * 2 * box_thick ,  box_thick * 2 , 0]) rotate([0,0,90])  grid_rectangular( n_grid_rectangulars_bottom,  box_thick+2,  box_thick / 2,  box_height - 4 *  box_thick, 4 *  box_thick );
