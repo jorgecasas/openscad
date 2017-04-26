@@ -76,3 +76,11 @@ Para cambiar o sustituir el filamento, debe estar precalentado el extrusor
 
 * [Youtube - Limpieza noozle Wanhao Duplicator i3](https://www.youtube.com/watch?v=sGO7uQek9z8)
 * [Youtube - Desmontaje completo extrusor Wanhao Duplicator i3](https://www.youtube.com/watch?v=KiWBLCDvM_I)
+
+## Pasos para realizar calibración (según material)
+
+Para realizar la calibración de la configuración en Cura, podemos crear varios perfiles según el tipo de material. Por ejemplo, en el apartado **resources/cura** hay varios perfiles (profiles) que se pueden utilizar con Cura para ser utilizados con ABS, PLA, etc...
+
+Sin embargo, según el material utilizado (ABS, PLA... incluso el color del material), antes de imprimir habrá que realizar calibraciones y varios tests hasta que tengamos el perfil correcto para esa bobina de material.
+
+Para ello, se puede descargar el objeto [5mm Calibration Cube Steps](http://www.thingiverse.com/thing:24238) u otros similares como [Hollow Calibration Cube](https://www.thingiverse.com/thing:271736) y realizar impresiones de prueba para ver la calidad obtenida para el perfil.
