@@ -72,3 +72,7 @@ Para cambiar o sustituir el filamento, debe estar precalentado el extrusor
   * **Cortar nuevo filamento** con ángulo de 45 grados
   * **Introducir el filamento** pulsando en la opción correspondiente (load) hasta que salga material, que luego deberá ser removido.
 
+## Pasos a realizar para limpiar el cabezal (nozzle / extruder)
+
+* [Youtube - Limpieza noozle Wanhao Duplicator i3](https://www.youtube.com/watch?v=sGO7uQek9z8)
+* [Youtube - Desmontaje completo extrusor Wanhao Duplicator i3](https://www.youtube.com/watch?v=KiWBLCDvM_I)
