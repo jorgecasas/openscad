@@ -11,6 +11,12 @@
 
 Los parámetros a utilizar en [cura](https://ultimaker.com/en/products/cura-software) para la impresora *Wanhao Duplicator i3*, que es un clon de las *Prusa i3*:
 
+### Impresora
+
+* Seleccionar tipo de impresora (Settings >> Manage printers >> Add printer >> Others >> Prusa i3). 
+* Si no se selecciona el tipo de impresora, puede que no comience a imprimir correctamente, o que empiece a imprimir en un lateral en vez de en el centro de la bandeja.
+* Si no aparece en el listado la Wanhao Duplicator i3, seleccionar la Prusa i3 (ya que es un clon de ésta)
+
 ### Material PLA
 
 * Layer height: 0.2mm
