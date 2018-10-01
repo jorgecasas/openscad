@@ -6,7 +6,7 @@ use <play.ttf>;
 text_font="Play:style=Bold";
 text_font_size = 14; 
 
-text="LV23";
+text="B&M";
 
 // Datos parametrizables del llavero, en mm
 r = 2;
@@ -35,13 +35,16 @@ difference() {
 
     translate( [3, 2, -1] ) cylinder( r=r, h=2*z);
 }
+
+// Next for squared keyring (uncomment)
 /**
+str_length = 40;
 union(){
     difference(){
-        cube( [76,8,3] );
-       translate( [ 4,4,-1] )  cylinder(h=10,r=2, $fn=60);
+        cube( [str_length,x*2,r*2] );
+       translate( [ 4,4,-1] )  cylinder(h=x*3,r=2, $fn=60);
     }
 
-    translate( [ 8,0,0]) text_extrude( text_02 , extrusion_height = 6, center = false, font = text_font, size = text_font_size, spacing = 1 );
+    translate( [ 8,0,0]) text_extrude( text , extrusion_height = z*2, center = false, font = text_font, size = text_font_size, spacing = 0.75 );
 }
-*/
+**/
