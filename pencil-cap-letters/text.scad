@@ -212,7 +212,9 @@ module text_on_circle(t=default_t,
                       valign           = undef,
                       language         = undef,
                       script           = undef,
-                      spacing          = default_spacing
+                      spacing          = default_spacing,
+                      convexity        = undef,
+                      scale            = undef
 ){
 //    echo (str("text_on_circle:","There are " ,len(t) ," letters in t" , t));
 //    echo (str("text_on_circle:","rotate=" , rotate));
@@ -245,7 +247,7 @@ module text_on_circle(t=default_t,
             spacing=spacing,
             direction=undef, //We don't pass direction ( misaligns inside text() ). TODO: Investigate why
             language=language,script=script,halign=halign,valign=valign,
-            extrusion_height=extrusion_height );
+            extrusion_height=extrusion_height , convexity = convexity, scale = scale);
     }
 }
 
@@ -604,7 +606,8 @@ module text_extrude( t=default_t,
                      valign           = undef,
                      language         = undef,
                      script           = undef,
-                     spacing          = default_spacing
+                     spacing          = default_spacing,
+                     convexity        = undef,
 )
 {
     //echo (str("text_extrude:","There are " ,len(t) ," letters in text" , t));
@@ -627,15 +630,15 @@ module text_extrude( t=default_t,
     rotate            = default_if_undef(rotate,default_rotate);
     spacing           = default_if_undef(spacing,default_spacing);
     size              = default_if_undef(size,default_size);
+    convexity         = default_if_undef(convexity,10);
     
     halign            = (center) ? "center" : halign ;
     valign            = (center) ? "center" : valign ;
     extrusion_center  = (center) ? true : false ;
     
-    scale( scale )
     rotate(rotate,[0,0,-1]) //TODO: Do we want to make this so that the entire vector can be set?
     {
-        linear_extrude(height=extrusion_height,convexity=10,center=extrusion_center)
+        linear_extrude(height=extrusion_height,convexity=convexity,center=extrusion_center, scale=scale)
         text(text=t, size = size,
             $fn = 40,
             font = font, direction = direction, spacing = spacing,
